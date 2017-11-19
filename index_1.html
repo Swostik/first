@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+	
+	<div class="first"><p>Text A<p></div>
+	<div class="second"><p>Text B</p></div>
+	<div class="third"><p>Text C </p></div>
+	
+	<img class="firstimage" src="first.jpg" alt="first">
+	<img id="drag1" src="first.jpg" alt="second" draggable="true" ondragstart="drag(event)">
+	<div class= "fourth"><p style="color:red">Text D</p></div>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>

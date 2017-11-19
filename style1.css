@@ -1,0 +1,89 @@
+
+
+.first{
+	
+	display: inline-block;
+	width: 200px;
+	height:200px;
+	background-color:blue
+}
+.second{
+	display: inline-block;
+	width: 200px;
+	height:200px;
+	margin-left:250px;
+	background-color:yellow
+}
+.second p{
+	font-size:40px;
+	 margin: 0;
+    position: relative;
+    top: 50%;
+}
+.third{
+	display: inline-block;
+	width: 200px;
+	height:200px;
+	margin-left:150px;
+	background-color:green
+}
+.third p{
+	font-size:20px;
+	margin:10;
+    position: relative;
+    top: 75%;
+	left:50%;
+    
+}
+.firstimage{
+	position: absolute;
+    right: 0px;
+	top:0px;
+    width: 200px;
+	height:200px;
+	animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#drag1{
+	position : absolute;
+	top : 500px;
+	left:0px;
+	
+	width: 200px;
+	height:200px;
+	
+}
+@keyframes example {
+    0%   { right:0px; top:0px;}
+    25%  { right:200px; top:0px;}
+    50%  {right:200px; top:200px;}
+    75%  { right:0px; top:200px;}
+    100% { right:0px; top:0px;}
+}
+.fourth {
+	position : absolute;
+	top : 500px;
+	left:400px;
+	width: 550px;
+	height:200px;
+	border-style: solid;
+    border-color: red;
+	
+}
+#div1{
+	position : absolute;
+	top : 750px;
+	left:0px;
+	width: 300px;
+	height:300px;
+	border-style: solid;
+}
+#div2{
+	position : absolute;
+	top : 750px;
+	left:550px;
+	width: 300px;
+	height:300px;
+	border-style: solid;
+}
